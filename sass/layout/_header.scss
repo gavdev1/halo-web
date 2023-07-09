@@ -1,0 +1,85 @@
+@use "../mixin" as *;
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+
+.header{
+  height: 50vh;
+  background-color: toRGBA(#fff, .6);
+  @include bg-image("../img/halo-infinite-cover.jpeg");
+  @include breakpoints("sm") {
+    height: 100vh;
+  }
+}
+
+.nav {
+  position: relative;
+  padding: 1em;
+  background-color: toRGBA(#fff, .3);
+  @include flex(flex, null, null, null, space-between, center);
+  @include breakpoints("sm") {
+  }
+
+  &__bar{
+    font-size: 2em;
+    @include breakpoints("sm") {
+      display: none;
+    }
+  }
+
+  &__logo{
+    width: 110px;
+  }
+
+  &__menu{
+    @include position(absolute, -10000%);
+    @include flex(flex, column, null, 4em);
+    @include transiciones(1s, top);
+    @include breakpoints("sm") {
+      position: static;
+      @include flex(flex, row, null, 1em);
+    }
+  }
+
+  &__icon{
+    font-size: 2em;
+    @include breakpoints("sm") {
+      display: none;
+    }
+  }
+}
+
+.menu-visible {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 2em 1em;
+  background-color: getColor("white");
+  z-index: 10;
+}
+
+.home {
+  @include position(absolute, null, 0, -7em, 0);
+  text-align: center;
+  padding: 4em 2em;
+  background-color: getColor("white");
+  @include breakpoints("sm") {
+    position: static;
+  }
+
+  &-container{
+    margin-top: 4em;
+    @include flex(flex, null, null, null, flex-end, center)
+  }
+
+  &__text{
+    margin-block: 1em;
+    font-size: 1.1em;
+  }
+
+  &__join{
+    @include flex(flex, null, null, 1em, center, center);
+    font-weight: bold;
+    color: lighten(getColor("primary"), 5);
+  }
+}

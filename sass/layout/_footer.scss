@@ -1,0 +1,6 @@
+@use "../mixin" as *;
+
+.footer{
+  height: 100vh;
+  @include bg-image("../img/master-chief.jpg");
+}

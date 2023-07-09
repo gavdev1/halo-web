@@ -1,0 +1,21 @@
+@use "../mixin" as *;
+
+.become{
+	margin-top: 25em;
+	padding-block: 5em;
+	text-align: center;
+	@include bg-image("../img/bg-videos.png");
+	@include breakpoints("sm") {
+		margin-top: 0;
+	}
+
+	&__video{
+		width: 90%;
+		height: 400px;
+		margin: 1em auto;
+		@include breakpoints("sm") {
+			height: 500px;
+		}
+
+	}
+} 

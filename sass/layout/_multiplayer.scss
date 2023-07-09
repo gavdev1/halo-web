@@ -1,0 +1,26 @@
+@use "../mixin" as *;
+@use "../utilities/functions" as *;
+
+.multiplayer{
+	width: 70%;
+	background-color: toRGBA(#fff, .8);
+	padding: 2em;
+	@include  breakpoints-max("2sm") {
+		width: 90%;
+	}
+	@include breakpoints("sm") {
+		width: 50%;
+		margin-inline: 1em;
+	}
+
+	&-container {
+		height: 100vh;
+		@include bg-image("../img/bg-multiplayer.jpeg");
+		@include flex(flex, column, null, null, center, center);
+		@include breakpoints("sm") {
+			@include flex(null, null, null, null,  null, flex-end);
+		}
+
+	}
+	
+}

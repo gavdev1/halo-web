@@ -1,0 +1,12 @@
+{
+  "name": "05-halo",
+  "version": "1.0.0",
+  "description": "Web de Halo infinite responsiva compatible con todos los dispositivos moviles, se usaron las tecnologías HTML & SASS & JS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w sass/style.scss src/assets/css/style.css"
+  },
+  "keywords": [],
+  "author": "Gabriel Acero",
+  "license": "ISC"
+}

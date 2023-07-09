@@ -1,0 +1,29 @@
+@use "../mixin" as *;
+
+.buy{
+	text-align: center;
+	padding-block: 2em;
+	@include breakpoints("sm"){
+		@include grid(1fr, 2, 1.5em, null, center);
+		text-align: left;
+	}
+
+	&__title{
+		font-size: 1.4em;
+		margin-bottom: 1em;
+	}
+
+	&__text{
+		margin-block: 2em;
+	}
+
+	&__select{
+		margin-inline: auto;
+		display: block;
+		margin-bottom: 2em;
+		width: 100px;
+		@include breakpoints("sm") {
+			margin-inline: 0;
+		}
+	}
+}
